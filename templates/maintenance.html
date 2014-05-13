@@ -1,0 +1,33 @@
+<h1>{{title}}</h1>
+
+<table>
+	<thead>
+		<th>USER ROLE</th>
+		<th>ROLE DESCRIPTION</th>
+		<th>ACTION</th>
+	</thead>
+	<tbody>
+		<tr ng-repeat="item in pagedItems | orderBy:sortingOrder:reverse">
+			<td><input type="text" ng-disabled="!disablelist" value="{{item.userRole}}"  /></td>
+			<td><input type="text" ng-disabled="!disablelist" class="inactive" value="{{item.roleDesc}}" /></td>
+			<td>
+				<a class='edit' ng-click="disablelist=!disablelist"> Edit</a> 
+				/ 
+				<a class='remove' ng-click="pagedItems.splice($index,1)"> Delete </a>
+				
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -11,20 +11,12 @@ var app = angular
 				templateUrl: 'templates/home.html',
 				controller: 'homeCtrl',
 				resolve: {
-					/*login: ['Login', function(Login){//services/login.js
-						return Login.get();
-					}]*/
 					login: ['$http', function($http){//Use with json data
 						return $http.get('api/loginData.json').then(function(response){
 							return response.data;
 						})
 					}]
 				}
-				/*,
-				controller: ['$scope', function(a){
-					a.title = "Home";
-					a.items = ['Home','About','Contact'];
-				}]*/
 			})
 			.state('home.test', {
 				url: '',
@@ -46,7 +38,21 @@ var app = angular
 				templateUrl: 'templates/login.html',
 				controller: 'loginCtrl'
 			})
+			.state('logout', {
+				url: '/logout',
+				templateUrl: 'templates/logout.html',
+				controller: 'LogoutController'
+			})
+			.state('home.roleMaintenance', {
+				url: 'roleMaintenance',
+				templateUrl: 'templates/maintenance.html',
+				controller: 'loggedLanding'
+			})
+			
 	}])
+			
+	
+	
 	
 	
 	
