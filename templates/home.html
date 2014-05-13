@@ -1,1 +1,40 @@
 <h1>{{title}}</h1>
+
+<table>
+	<thead>
+		<th>Name</th>
+		<th>Surname</th>
+	</thead>
+	<tbody>
+		<tr ng-class="{'special': item.isSpecial}" ng-repeat='item in login'>
+			<td>
+				<input type='text' ng-model="item.name" />
+			</td>
+			<td>
+				<input type='text' ng-model="item.surname" />
+			</td>
+			<td>
+				<button class='btn remove' ng-click="login.splice($index,1)"> x </button>
+			</td>
+		</tr>
+	</tbody>
+	
+</table>
+<button ng-click='save()' class='btn'>Save</button>
+
+<p>
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut laoreet sem, quis sollicitudin magna. Praesent sit amet velit in risus blandit lacinia. Vestibulum venenatis nisl ut nulla consectetur feugiat. Sed vehicula dui varius sollicitudin suscipit. Nam dolor lacus, blandit sit amet iaculis et, molestie eu eros. Integer at porttitor neque. Interdum et malesuada fames ac ante ipsum primis in faucibus...
+	<br/><br/><a ui-sref="home.test">view more</a>
+</p>
+
+<div ui-view/>
+
+<!--
+<input ng-model="testProp"/>
+
+<a href="" ng-click="test({modelProp:'testProp'})">change title to model</a>
+<a href="" ng-click="test({text:'Foo'})">change title to text</a>
+
+<a href="" ng-click="testBad('testProp')">change title to model</a>
+<a href="" ng-click="testBad('', 'Foo')">change title to text</a>
+-->

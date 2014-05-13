@@ -46,16 +46,7 @@ var app = angular
 				templateUrl: 'templates/login.html',
 				controller: 'loginCtrl'
 			})
-			.state('logout', {
-				url: '/logout',
-				templateUrl: 'templates/logout.html',
-				controller: 'LogoutController'
-			})
-			
 	}])
-			
-	
-	
 	
 	
 	
