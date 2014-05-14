@@ -1,7 +1,8 @@
 <div>
 	<form role='form' name='myForm'>
 		<div class='form-group'>
-			<input type='email' placeholder='Email' required ng-model="user.mail" />
+			<input type='email' name='emailTxt' ng-pattern="EMAIL_REGEXP" placeholder='Email' required ng-model="user.mail" />
+			<span class="alert error" ng-show="myForm.emailTxt.$error.url">URL error</span>
 		</div>
 		<div class='form-group'>
 			<input type='password' placeholder='Password' id='inputPassword' class='form-control' required ng-model="user.pass" />
