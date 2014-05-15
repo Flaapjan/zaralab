@@ -5,7 +5,6 @@ angular
 	.factory('loginService',function($http,$location){
 		return{
 			login:function(user){
-				//console.log('enter function service');
 				var $promise=$http.post('data/user.php',user); //send data to user.php
 				$promise.then(function(msg){
 					if(msg.data=='success'){
