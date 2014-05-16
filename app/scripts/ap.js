@@ -7,7 +7,7 @@ var app = angular
 		
 		$stateProvider
 			.state('home', {
-				url: '/',
+				url: '/home/',
 				templateUrl: 'templates/home.html',
 				controller: 'homeCtrl'
 			})
@@ -31,13 +31,13 @@ var app = angular
 				templateUrl: 'templates/logout.html',
 				controller: 'LogoutController'
 			})
-			.state('home.roleMaintenance', {
+			.state('roleMaintenance', {
 				url: 'editRole',
 				templateUrl: 'templates/maintenance.html',
 				controller: 'loggedLanding'
 			})
-			.state('home.editRole', {
-				url: 'editRole/:role',
+			.state('roleMaintenance.editRole', {
+				url: 'roleMaintenance/editRole/:role',
 				templateUrl: 'templates/editRole.html',
 				controller: 'editRole'
 			})
